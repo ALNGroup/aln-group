@@ -1,4 +1,4 @@
-worker: echo "testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-worker: apt-get install libsqlite3-dev
-worker: bundle install
+worker: env QUEUE=* echo "testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+worker: env QUEUE=* apt-get install libsqlite3-dev
+worker: env QUEUE=* bundle install
 web: bundle exec rails server -p $PORT
