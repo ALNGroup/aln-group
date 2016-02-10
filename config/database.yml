@@ -11,12 +11,7 @@ default: &default
 
 development:
   <<: *default
-  development:
-    adapter: postgresql
-    host: ec2-107-20-136-89.compute-1.amazonaws.com
-    username: tlxzrmuxycfsgy
-    database: app-dev
-  #database: db/development.sqlite3
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -27,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: db/development.sqlite3
+  # database: db/production.postgresql
+  #   adapter: postgresql
+  #   host: ec2-107-20-136-89.compute-1.amazonaws.com
+  #   username: tlxzrmuxycfsgy
+  #   database: app-dev
+  #   port: 5432
