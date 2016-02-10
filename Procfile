@@ -1,2 +1,2 @@
-bundle install
+worker: bundle install
 web: bundle exec rails server -p $PORT
