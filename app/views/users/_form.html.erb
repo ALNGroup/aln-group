@@ -1,0 +1,20 @@
+<%= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :username %>
+  <%= error_span(@user[:username]) %>
+  <%= f.input :password %>
+  <%= error_span(@user[:password]) %>
+  <%= f.input :email %>
+  <%= error_span(@user[:email]) %>
+  <%= f.input :phone_work %>
+  <%= error_span(@user[:phone_work]) %>
+  <%= f.input :phone_private %>
+  <%= error_span(@user[:phone_private]) %>
+  <%= f.input :have_car %>
+  <%= error_span(@user[:have_car]) %>
+  <%= f.input :picture %>
+  <%= error_span(@user[:picture]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                users_path, :class => 'btn btn-default' %>
+<% end %>

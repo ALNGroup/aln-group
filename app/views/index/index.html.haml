@@ -1,0 +1,11 @@
+//%strong{:class => "code", :id => "message"} Hello, World!
+//%br
+//%strong.code#message Hello, World!
+%div{:class => "container-fluid"}
+  %h2 Welcome to our site!
+  %h1= @app_name
+  %button{:class => "btn-primary"} Login
+  .left.column
+    = render :partial => "left_bar"
+  .right.column
+    = render :partial => "right_bar"

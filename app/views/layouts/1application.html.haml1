@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Workspace
+    =stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    =javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    =csrf_meta_tags
+  %body
+    %nav{:class => "navbar navbar-inverse navbar-fixed-top"}
+      %div{:class => "container"}
+        %div{:class => "navbar-header"}
+          %a{:class => "navbar-brand"} ALN Group
+        %div{:class => "navbar-collapse collapse"}
+          %form{:class =>  "navbar-form navbar-right"}
+            %div{:class => "form-group"}
+              %input{:class => "form-control", :type => "text", :placeholder => "Email" }
+            %div{:class => "form-group"}
+              %input{:class => "form-control",  :type => "password", :placeholder => "Password" }
+            %button{:class => "btn btn-success", :type => "submit"} Sign in
+    =yield
